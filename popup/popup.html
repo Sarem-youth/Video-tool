@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Analytics Tools</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <h2>YouTube Analytics</h2>
+      <div class="quick-actions">
+        <button class="icon-button" title="Settings">
+          <span class="material-icons">settings</span>
+        </button>
+        <button class="icon-button" title="Refresh">
+          <span class="material-icons">refresh</span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="tools-nav">
+      <div class="tools-grid">
+        <button class="tool-button" id="rankTracker">
+          <span class="material-icons">trending_up</span>
+          <span>Rank Tracker</span>
+        </button>
+        <!-- ...other buttons with icons... -->
+      </div>
+    </nav>
+
+    <div class="quick-stats-container">
+      <div class="stat-card">
+        <div class="stat-icon">
+          <span class="material-icons">visibility</span>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">Current VPH</span>
+          <span class="stat-value" id="currentVPH">0</span>
+        </div>
+      </div>
+      <!-- More stat cards -->
+    </div>
+
+    <div id="results" class="results-panel">
+      <!-- Results content -->
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

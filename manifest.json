@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Analytics Helper",
+  "version": "1.0",
+  "description": "Free YouTube analytics and optimization tools",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "https://www.googleapis.com/youtube/v3/*",
+    "https://*.youtube.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content/content.js"],
+      "css": ["content/styles.css"]
+    }
+  ]
+}
